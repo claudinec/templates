@@ -1,0 +1,60 @@
+\documentclass[12pt,a4paper]{scrartcl}
+
+% for Latin alphabet only:
+\usepackage[british]{babel}
+\usepackage[T1]{fontenc}
+
+% for Latin and Greek alphabets:
+% \usepackage[british,greek]{babel}
+% \usepackage{ucs}
+% \usepackage[utf8]{inputenc}
+
+\usepackage{gfsdidot}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[scrtime]{prelim2e}
+
+% for historical/source-based essays:
+% \usepackage{bibtopic}
+
+\usepackage[oxford,
+  super,
+  bibformat=ibidem,
+  ibidem,
+  citefull=first,
+  commabeforerest,
+  titleformat=all]
+{jurabib}
+\renewcommand{\bibansep}{. }
+\jbdotafterbibentry
+\jbuseidemhrule
+
+\begin{document}
+
+\subject{subject name}
+
+\title{assignment title}
+
+\author{Claudine Chionh}
+
+\date{assignment date}
+
+\publishers{Lecturer: lecturer name}
+
+\maketitle
+
+\pagestyle{fancy}
+\chead{title} \rhead{\thepage}
+\cfoot{}
+\thispagestyle{plain}
+
+\input{body}
+
+\bibliography{...}
+\bibliographystyle{jox}
+
+% or, if using bibtopic:
+% \include{bibtopic}
+
+\end{document}
